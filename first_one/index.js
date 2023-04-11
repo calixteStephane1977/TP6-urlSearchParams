@@ -4,8 +4,8 @@ const allInput =document.querySelectorAll('input')
 const resultat =document.querySelector('#result')
 console.log(resultat);
 
-const h =window.location.search;
-
+const h =window.location.search; 
+console.log(h);
 const urlsearch = new URLSearchParams(h)
 
 let leNom = urlsearch.get("nom");

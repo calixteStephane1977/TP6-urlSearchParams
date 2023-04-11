@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienvenue</title>
     <link
@@ -13,9 +14,36 @@
     />
 </head>
 <body>
+  <div class="col-2"> </div>
+  <div class="col-8 mx-auto ">
     <div class="border w-100 h-50 bg-black text-light " id="result">
         TTTTT
    </div>
+   <fieldset class="border  ">
+     <legend>Authentification</legend>
+    <div class="col-8 border ">
+      <div class="d-flex justify-content-between">
+        <label class="w-25 border" for="log">login</label>
+        <input   id="log" type="text" name="login" >
+
+      </div>
+      <div class="d-flex justify-content-between" >
+        <label class="w-25 border" for="password">Mot de passe</label>
+        <input  id="password" type="password" name="password" >
+
+      </div>
+
+    </div>
+     <div class="mx-auto  m-2 col-2 d-flex justify-content-between">
+       <input type="submit" value="Connection" >
+       <input type="button" value="Annuler">
+
+     </div>
+   </fieldset>
+
+  </div>
+  <div class="col-2"> </div>
+   <a href="">Pas de compte?Créer un compte</a>
     <!-- <input  id="btn_send" name="send" class="d-flex justify-content-center w-100 "style="visibility: hidden;" type="submit" value="Envoyer" /> -->
    <script src="../index.js" ></script>
 

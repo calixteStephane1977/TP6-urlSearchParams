@@ -23,32 +23,32 @@
         <fieldset class=" border mx-5 col-6 text-start mx-auto">
             <legend class="mb-5 mx-5">Vos données personnelles</legend>
             
-            <form  name="myForm" class="table"  action="./bienvenue.html" method="get"  >
+            <form  name="myForm" class="table"  action="../bienvenue.html" method="get"   >
 
             <div class="table ">
                 <label class=" w-25 text-end" for="nom">Nom</label>
-                <input class="rounded border-0 shadow-lg w-50 " name="nom" id="nom" type="text" pattern="[A-Za-z]{0,30}" />
+                <input class="rounded border-0 shadow-lg w-50 " name="nom" id="nom" type="text" pattern="[A-Za-zéèà]{0,30}" required />
             </div>
 
             <div class="table">
                 <label class=" w-25 text-end" for="prenom">Prenom</label>
-                <input class="rounded border-0 shadow-lg w-50" name="prenom"  id="prenom" type="text" pattern="[A-Za-z]{0,30}" />
+                <input class="rounded border-0 shadow-lg w-50" name="prenom"  id="prenom" type="text" pattern="[A-Za-zéèà]{0,30}" required />
             </div>
 
             <div class="table">
               <label class=" w-25 text-end" for="date">Date de naissance</label>
-              <input class="rounded border-0 shadow-lg w-50" name="date"  id="date" type="date" pattern="[0-9]{8}" />
+              <input class="rounded border-0 shadow-lg w-50" name="date"  id="date" type="date" pattern="[0-9]{8}" required />
             </div>
             <fieldset class="table border">
               <legend class="mb-5 mx-5" >Lieu de naissance</legend>
               <label class=" w-25 text-end" for="ville">Seine-Saint-Denis</label>
-              <input class="rounded border-0 shadow-lg" name="ville" id="ville" type="radio" />
+              <input class="rounded border-0 shadow-lg" name="ville" id="ville" type="radio" required />
               <label for="monde">Reste du monde</label>
-              <input class="rounded border-0 shadow-lg" name="monde" id="monde" type="radio" />
+              <input class="rounded border-0 shadow-lg" name="monde" id="monde" type="radio" required />
             </fieldset>
             <div class="table mt-5">
               <label class=" w-25 text-end" for="adresse">Adresse postale</label>
-              <input class="rounded border-0 shadow-lg w-50" name="adresse" id="adresse" type="text" pattern="[0-9A-Za-z ]{0,70}" />
+              <input class="rounded border-0 shadow-lg w-50" name="adresse" id="adresse" type="text" pattern="[0-9A-Za-z ]{0,70}" required  />
             </div>
     
             <div class="table">
@@ -58,12 +58,13 @@
               id="electronique_adresse"
               type="number "
               name="electoniqueAdresse";
-              pattern="[0-9a-z*]{30}";
+              pattern="[A-Za-z0-9/_\@-]{0,50}";
+              required 
               />
             </div>
             <div class="table">
                 <label class=" w-25 text-end" for="code_postal" >Code postal</label>
-                <input class="rounded border-0 shadow-lg w-50" name="codePostal" id="code_postal"type="text" pattern="[0-9]{5}"/>
+                <input class="rounded border-0 shadow-lg w-50" name="codePostal" id="code_postal"type="text" pattern="[0-9]{5}" required />
             </div>
             <div class="table">
               <label class=" w-25 text-end" for="personal_page">Page personnelle</label>
@@ -72,12 +73,13 @@
                 id="personal_page"
                 type="text"
                 name="personnalPage"
-                pattern="[a-z0-9]{0,50}"
+                pattern="[A-Za-z0-9/_\@-]{0,50}"
+                required 
               />
             </div>
             <div class="table">
               <label class=" w-25 text-end" for="phone">Téléphone portable</label>
-              <input class="rounded border-0 shadow-lg w-50" name="phone" id="phone" type="text" pattern="[0-9]{10}" placeholder="+33" />
+              <input class="rounded border-0 shadow-lg w-50" name="phone" id="phone" type="text" pattern="[0-9]{10}" placeholder="+33" required  />
             </div>
             <div class="table d-flex justify-content-center align-items-center">
               <label for="semestre">Semestre</label>
@@ -97,24 +99,27 @@
             </div>
             <fieldset class="table border text-center">
               <legend class="text-start mx-5 mb-5">Connaissances</legend>
-              <label  for="html">HTML</label>
-              <input  name="html" class="rounded border-0 shadow-lg" id="html" type="checkbox" />
-              <label for="css">CSS</label>
-              <input class="rounded border-0 shadow-lg" id="css" type="checkbox" />
-              <label for="formulaire">formulaires</label>
-              <input
-                class="rounded border-0 shadow-lg"
-                id="formulaire"
-                type="checkbox"
-                name="formulaire"
-              />
-              <label for="javascript">JavaScript</label>
-              <input
-                class="rounded border-0 shadow-lg  "
-                id="javascript"
-                type="checkbox"
-                name="javascript"
-              />
+              <div class="d-flex flex-column">
+                <label  for="html">HTML</label>
+                <input  name="html" class="rounded border-0 shadow-lg" id="html" type="checkbox" />
+                <label for="css">CSS</label>
+                <input class="rounded border-0 shadow-lg" id="css" type="checkbox" />
+                <label for="formulaire">formulaires</label>
+                <input
+                  class="rounded border-0 shadow-lg"
+                  id="formulaire"
+                  type="checkbox"
+                  name="formulaire"
+                />
+                <label for="javascript">JavaScript</label>
+                <input
+                  class="rounded border-0 shadow-lg  "
+                  id="javascript"
+                  type="checkbox"
+                  name="javascript"
+                />
+
+              </div>
             </fieldset>
             <input  id="btn_send" name="send" class="d-flex justify-content-center w-100" type="submit" value="Envoyer" />
           </form>
